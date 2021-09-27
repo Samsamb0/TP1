@@ -1,0 +1,13 @@
+let coursAnglaisEcts = 15;
+let coursProgrammationEcts = 25;
+let coursInitPcEcts = 20;
+let matriculeEtudiant = prompt("veuillez introduire votre matricule étudiant")
+let coteAnglais = prompt("veuillez introduire votre cote d'anglais sur 20");
+let coteProgrammation = prompt("veuillez introduire votre cote de programmation sur 20");
+let coteInitPcEcts = prompt("veuillez introduire votre cote d'inititation Pc sur 20");
+let coteTotal = (coteProgrammation/20*coursProgrammationEcts) + (coteAnglais/20*coursAnglaisEcts) + (coteInitPcEcts/20*coursInitPcEcts)
+let moyenne = coteTotal/60*100
+let message = "La moyenne de vos cotes est de " + (moyenne.toFixed(2)) + "%"
+console.log(message);
+
+
