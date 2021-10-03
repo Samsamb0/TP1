@@ -1,0 +1,26 @@
+const CoursAnglaisEcts = 15;
+const CoursProgrammationEcts = 25;
+const CoursInitPcEcts = 20;
+let matriculeEtudiant =prompt("veuillez introduire votre matricule étudiant");
+let coteAnglais = Number(prompt("veuillez introduire votre cote d'anglais sur 20"));
+let coteProgrammation = Number(prompt("veuillez introduire votre cote de programmation sur 20"));
+let coteInitPcEcts = Number(prompt("veuillez introduire votre cote d'inititation Pc sur 20"));
+
+let coteTotal = (coteProgrammation/20*CoursProgrammationEcts) + (coteAnglais/20*CoursAnglaisEcts) + (coteInitPcEcts/20*CoursInitPcEcts);
+let moyenne = coteTotal /60*20;
+
+if(moyenne >= 10 && coteAnglais>=10 && coteProgrammation>=10 && coteInitPcEcts>=10) {
+	console.log("vous avez réussi");
+}
+else if(moyenne <10){
+	console.log("vous avez raté");
+}
+if(moyenne >=12) {
+	console.log("satisfaction");
+}	
+else if(moyenne >=14) {
+	console.log("distinction");
+}
+else if (moyenne >=16) {
+	console.log("grande distinction")
+}
