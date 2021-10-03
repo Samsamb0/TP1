@@ -2,46 +2,46 @@ const COURS_ANGLAIS_ECTS = 15;
 const COURS_PROGRA_ECTS = 25;
 const COURS_INITPC_ECTS = 20;
 
-  let matriculeEtudiant;
-  let aReussi; // boolean
-  let aRate;
-  let grade;
-  let coteAnglais;
-  let coteProgrammation;
-  let coteInitPc;
-  let messageRate;
-  let messageReussi;
+let matriculeEtudiant;
+let aReussi; // boolean
+let aRate;
+let grade;
+let coteAnglais;
+let coteProgrammation;
+let coteInitPc;
+let messageRate;
+let messageReussi;
   
-  matriculeEtudiant = prompt("Veuillez saisir votre matricule");
-		coteAnglais = +prompt("Veuillez saisir votre résultat sur 15 au cours d'Anglais");
-			coteProgrammation = +prompt("Veuillez saisir votre résultat sur 25 au cours de Programmation");
-				coteInitPc = +prompt("Veuillez saisir votre résultat sur 20 au cours de InitPc");
+matriculeEtudiant = prompt("Veuillez saisir votre matricule");                                                                      
+coteAnglais = +prompt("Veuillez saisir votre résultat sur 15 au cours d'Anglais");
+coteProgrammation = +prompt("Veuillez saisir votre résultat sur 25 au cours de Programmation");
+coteInitPc = +prompt("Veuillez saisir votre résultat sur 20 au cours de InitPc");
 let moyenneArith = ((coteAnglais*COURS_ANGLAIS_ECTS) + (coteProgrammation*COURS_PROGRA_ECTS) + (coteInitPc*COURS_INITPC_ECTS)) / 60;
-	console.log("Votre résultat en Anglais est :" + " " + coteAnglais);
-		console.log("Votre résultat en Programmation est :" + " " + coteProgrammation);
-			console.log("Votre résultat en InitPc est :" + " " + coteInitPc);
-				console.log(matriculeEtudiant + " " + "votre est moyenne arithmétique est :" + " " + moyenneArith.toFixed(2));
+console.log("Votre résultat en Anglais est :" + " " + coteAnglais);
+console.log("Votre résultat en Programmation est :" + " " + coteProgrammation);
+console.log("Votre résultat en InitPc est :" + " " + coteInitPc);
+console.log(matriculeEtudiant + " " + "votre est moyenne arithmétique est :" + " " + moyenneArith.toFixed(2));
 
 if ( (moyenneArith.toFixed(2) >= 10) && (coteAnglais >= 10 ) && (coteProgrammation >= 10) && (coteInitPc >= 10) ) {
     Boolean(aReussi = true);
     messageReussi = "vous avez réussi";
 }
-	else {
-		Boolean(aReussi = false);
-        messageRate = "vous avez raté";
-	}
+else {
+	Boolean(aReussi = false);
+	messageRate = "vous avez raté";
+}
 if ( (aReussi == true) && (moyenneArith.toFixed(2) >= 12) ){
 	grade = "satisfaction";
 }
-	else if ( (aReussi == true) && (moyenneArith.toFixed(2) >= 14) ){
-		grade = "distinction";
-	}
-		else if ( (aReussi == true) && (moyenneArith.toFixed(2) >= 16) ){
-			grade = "grande distinction";
-		}
-if (aReussi == true){
-    console.log(matriculeEtudiant + " " + "votre moyenne est : " + moyenneArith.toFixed(2) + ", " + messageReussi + grade);
+else if ( (aReussi == true) && (moyenneArith.toFixed(2) >= 14) ){
+	grade = "distinction";
 }
-    else if (aReussi == false){
-    console.log(matriculeEtudiant + " " + "votre moyenne est : " + moyenneArith.toFixed(2) + ", " + messageRate);
-    }
+else if ( (aReussi == true) && (moyenneArith.toFixed(2) >= 16) ){
+	grade = "grande distinction";
+}
+if (aReussi == true){
+	console.log(matriculeEtudiant + " " + "votre moyenne est : " + moyenneArith.toFixed(2) + ", " + messageReussi + grade);
+}
+else if (aReussi == false){
+	console.log(matriculeEtudiant + " " + "votre moyenne est : " + moyenneArith.toFixed(2) + ", " + messageRate);
+}
