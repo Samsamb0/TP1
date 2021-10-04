@@ -12,6 +12,9 @@ let coteInitPcEcts;
 let messageRate;//
 let messageReussi;//
 
+grade = 'satisfaction';
+grade2 = 'distinction';
+grade3 = 'grande distinction';
 
 matriculeEtudiant =prompt("veuillez introduire votre matricule étudiant");
 
@@ -49,3 +52,4 @@ console.log(matriculeEtudiant + " " + "votre moyenne est de" + " " + moyenne.toF
 function calculerMoyenneponderee(coteAnglais, coteProgrammation, coteInitPcEcts) {                   
 	return (coteAnglais/20*CoursAnglaisEcts/3) + (coteProgrammation/20*CoursProgrammationEcts/3) + coteInitPcEcts/20*CoursInitPcEcts/3    
 console.log(Number(prompt("coteAnglais")), Number(prompt("coteProgrammation")), Number(prompt("coteInitPcEcts")));	
+function obtenirResultat(matricule, coteAnglais, coteProgrammation, coteInitPc)  { 
