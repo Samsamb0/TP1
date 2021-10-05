@@ -1,55 +1,56 @@
+
+   
 const CoursAnglaisEcts = 15;
 const CoursProgrammationEcts = 25;
 const CoursInitPcEcts = 20;
 
 let matriculeEtudiant;
-let aReussi; // boolean
-let aRate;
-let grade;
+let aReussi; // booléen
+let grade ;
 let coteAnglais;
 let coteProgrammation;
-let coteInitPcEcts;
-let messageRate;//
-let messageReussi;//
+let coteInitPc;
+let message;
 
-grade = 'satisfaction';
-grade2 = 'distinction';
-grade3 = 'grande distinction';
 
 matriculeEtudiant =prompt("veuillez introduire votre matricule étudiant");
 
 coteAnglais = Number(prompt("veuillez introduire votre cote d'anglais sur 20"));
 coteProgrammation = Number(prompt("veuillez introduire votre cote de programmation sur 20"));
-coteInitPcEcts = Number(prompt("veuillez introduire votre cote d'inititation Pc sur 20"));
+coteInitPc = Number(prompt("veuillez introduire votre cote d'initiation Pc sur 20"));
 
-let coteTotal = (coteProgrammation/20*CoursProgrammationEcts) + (coteAnglais/20*CoursAnglaisEcts) + (coteInitPcEcts/20*CoursInitPcEcts);
-let moyenne = coteTotal /60*20;
+let coteTotal = (coteProgrammation/20*CoursProgrammationEcts) + (coteAnglais/20*CoursAnglaisEcts) + (coteInitPc/20*CoursInitPcEcts);
+let moyenne = coteTotal /3;
 
-if((moyenne.toFixed(2) >= 10 && coteAnglais>=10 && coteProgrammation>=10 && coteInitPcEcts>=10)) {
+if((moyenne) >= 10 && (coteAnglais>=10 && coteProgrammation>=10 && coteInitPc>=10)) {
 	Boolean(aReussi = true);
-	messageReussi = "vous avez réussi";
+	message = "vous avez réussi";
 }
 else {
-	Boolean (aReussi = false);
-	messageRate = "vous avez raté";
+	Boolean (aReussi = false) ;
+	message = "vous avez raté";
 }
 if((moyenne >=12) && (moyenne <14)) {
-	grade= "satisfaction";
+	grade = "satisfaction" ;
 }	
 else if ((moyenne >=14) && (moyenne <16)){
-	grade= "distinction";
+	grade= "distinction" ;
 }
 else if (moyenne >=16) {
-	grade= "grande distinction"
+	grade = "grande distinction"
 }
+else if ((moyenne>=10) && (moyenne<12)) {
+	grade = " ";
+}	
 if (aReussi == true) {
-	console.log(matriculeEtudiant + " " + "votre moyenne est de" + " " + moyenne.toFixed(2) + " " + messageReussi+ " " + grade)
+	console.log(matriculeEtudiant + " " + "votre moyenne est de" + " " + moyenne.toFixed(2) + " " + message+ " " + grade)
 }
 else if(aReussi == false) {
-console.log(matriculeEtudiant + " " + "votre moyenne est de" + " " + moyenne.toFixed(2) + " " + messageRate)
+console.log(matriculeEtudiant + " " + "votre moyenne est de" + " " + moyenne.toFixed(2) + " " + message)
 }
 
-function calculerMoyenneponderee(coteAnglais, coteProgrammation, coteInitPcEcts) {                   
-	return (coteAnglais/20*CoursAnglaisEcts/3) + (coteProgrammation/20*CoursProgrammationEcts/3) + coteInitPcEcts/20*CoursInitPcEcts/3    
-console.log(Number(prompt("coteAnglais")), Number(prompt("coteProgrammation")), Number(prompt("coteInitPcEcts")));	
-function obtenirResultat(matricule, coteAnglais, coteProgrammation, coteInitPc)  { 
+
+
+
+
+
