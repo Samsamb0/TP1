@@ -1,0 +1,120 @@
+
+let pizza = []
+//fonction 1
+function introduirePizzas() {
+for(let i = 0;i < pizza.length + 1; i++) {
+	let ingurgiter = prompt("combien de pizza avez vous mangés");
+	let ingurgiter2 = prompt("incorrect veuillez recommencer")
+		if (ingurgiter == "fin") {
+			break;
+		}
+			else if (ingurgiter == "sup") {
+				pizza.pop();
+			}
+				else  if (ingurgiter == "reinit") {
+					pizza = []
+				}
+					else if ((isNan(ingurgiter) == true) || (ingurgiter <0)) {
+					ingurgiter2
+				}	
+}
+pizza.push(Number(ingurgiter))
+}				
+
+//fonction 2
+function afficherNombreSemaines() {
+	let nombreSemaines = pizzas.length
+	console.log= ("vous avez introduis des données pour" + nombreSemaines + "  semaines");
+}
+
+//fonction 3
+function afficherPizzasParSemaine() { 
+	for(let a = 0; a<pizza.length;a++) {
+		let chaine;
+		if (pizza[i] > 1)
+			chaine = (" pizzas")
+			else {
+				chaine = (" pizza")
+			}	
+	console.log("Lors de la semaine " + (a+=1) + " vous avez mangé " + pizza[i] + chaine)	
+	}
+}
+	
+//fonction 4
+function afficherMaximumPizzas() {
+	let max = 0
+	for( let b = 0; b < pizza.length; b++){
+		if(pizza[i] > max) {
+			max = pizza[i]
+		}
+	}
+console.log("Le plus grand nombre de pizzas mangées en une semaine est : " + max) 	
+}	
+
+//fonction 5
+function afficherPlusDe3Pizzas(){
+	const LIMITE = 3
+	let count=0
+		for( let r = 0;r<pizza.length; r++) {
+			if(pizza[i] > 3) {
+				count+=1
+			}
+		}
+}
+console.log( "Vous avez mangé " + count + " fois plus de " + LIMITE + " pizzas durant la semaine.") 	
+
+//fonction 6
+function afficherDernieresPizzas(nombreSemaines) {
+	let nbrPizzas = 0
+		for(let c = pizza.length - nombreSemaines; c < pizza.length; c++) {
+			nbrPizzas +=pizza[c]
+		}
+console.log("Lors des " + nombreSemaines + " dernières semaines, vous avez mangé " + nbrpizzas + " pizzas");
+
+//fonction 7a
+function compterTotalPizzas() {
+	let total = 0
+		for (let z = 0; z<pizza.length; z++) {
+			total= pizzas[i]
+		}
+return total 		
+}		
+
+//fonction 7b		
+function afficherPoidsPizzas() {
+	const POIDS_PIZZA = 0.25
+	masseTotal = compterTotalPizzas() * POIDS_PIZZA
+	console.log(" Au total sur les " + pizza.length + " dernières semaines vous avez mangé " + masseTotal + " pizzas par semaine.");
+}
+
+//fonction 8
+function afficherMoyennePizzas() {
+moyennePizzas = compterTotalPizzas/pizza.length
+if(pizza == []) {
+	pizza [0] = 1
+}
+console.log("En moyenne, vous avez mangé " + moyennePizzas + " pizzas par semaine.")
+}
+
+//fonction 9
+afficherMaxPizzas(nombreSemaines) {
+	let maxTotal = 0
+		for(let g=0; g< pizza.length-nombreSemaines+1; g++); // +1 pcq aussi non on va pas à la fin
+		let max = 0
+			for (let k = 0; k<nombreSemaines; k++) {
+				max = pizza[g + k]
+			}
+			if (max > maxTotal) {
+				maxTotal = max
+			}
+console.log(maxTotal)
+}			
+
+
+
+
+
+
+
+
+push/pop/unshift/shift
