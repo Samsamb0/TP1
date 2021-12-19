@@ -28,3 +28,18 @@ function executerTp03Ex01_9a() {
  console.log(a + " chiffre trouvé")
 console.log(demande)
 }
+//VRAI SOLUTION
+function executerTp03Ex01_9a() {
+    let a = Math.floor(Math.random() * 100)
+    let demande= +prompt("veuillez introduire un nombre entre 0 et 100")
+    while (demande !=a) {
+        while (demande <a) {
+            demande= +prompt("trop petit")
+        }
+        while (demande > a) {
+            demande = + prompt("trop grand")
+        }
+    }
+    console.log(a + " chiffre trouvé")
+    console.log(demande)
+}
