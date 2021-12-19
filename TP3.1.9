@@ -12,3 +12,19 @@ function executerTp03Ex01_9a() {
 console.log(demande)
     
     }
+
+//solution
+function executerTp03Ex01_9a() {
+    let a = Math.floor(Math.random() * 100)
+    let demande= +prompt("10 chances pour trouver un nombre entre 0 et 100")
+    for (demande; demande<a;) {
+        demande = + prompt("trop petit")
+    for (demande; demande > a;) {
+            demande = + prompt("trop grand")
+        }
+  
+
+    }
+ console.log(a + " chiffre trouvé")
+console.log(demande)
+}
